@@ -1,20 +1,19 @@
 import express,{json} from 'express';
 import morgan from 'morgan';
 
-import ClientRouts from './routes/ClientRoutes'
 
+//routes inmports
+import ClientRoutes from './routes/ClientRoutes'
 
+//initializer
 const app = express();
 
 //middlewares 
 app.use(morgan('dev'));
 app.use(json());
 
-app.use(ClientRouts);
-
-
-
-
+//use routes
+app.use('api/users',ClientRoutes);
 
 
 export default app;

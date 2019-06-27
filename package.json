@@ -4,7 +4,9 @@
   "description": "api for conta web made in node-mysql-sequalize",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node dist/index.js",
+    "dev": "nodemon src/index.js --exec babel-node",
+    "build": "babel src --out-dir dist"
   },
   "repository": {
     "type": "git",
@@ -19,10 +21,12 @@
   "homepage": "https://github.com/byariel95/api-conta-web#readme",
   "dependencies": {
     "@babel/polyfill": "^7.4.4",
+    "bcrypt": "^3.0.6",
     "express": "^4.17.1",
     "morgan": "^1.9.1",
     "mysql2": "^1.6.5",
-    "sequelize": "^5.8.12"
+    "sequelize": "^5.8.12",
+    "sequelize-cli": "^5.5.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
