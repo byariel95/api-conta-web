@@ -13,7 +13,7 @@ app.use(morgan('dev'));
 app.use(json());
 
 //use routes
-app.use('api/users',ClientRoutes);
+app.use('/api/users',ClientRoutes);
 
 
 export default app;
