@@ -12,6 +12,7 @@ export async function createUser(req,res){
        },{
             fields: [Nick,Password,Rol,NombreCompleto]
         });
+        console.log(newUser);
        if (newUser) {
            return res.json({
                message: 'User created successfully',

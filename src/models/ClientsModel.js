@@ -1,7 +1,7 @@
 import sequelize from 'sequelize';
 import {conection} from '../config/database';
 
-const Users = conection.define('usuarios',{
+const User = conection.define('usuarios',{
     idUsuarios: {
         type: sequelize.INTEGER,
         primaryKey: true
@@ -13,18 +13,20 @@ const Users = conection.define('usuarios',{
     },
     Password: {
         type: sequelize.STRING(100),
-        
+        notNull: true
     },
     Rol: {
         type: sequelize.INTEGER,
+        notNull: true
     
     },
     NombreCompleto: {
         type: sequelize.STRING(50),
+        notNull: true
         
     },
     EstadoUsuario: {
-        type: sequelize.BOOLEAN,
+        type: sequelize.BOOLEAN
     
     }
 
@@ -32,4 +34,4 @@ const Users = conection.define('usuarios',{
     timestamps: false
 });
 
-export default Users
+export default User;
