@@ -7,5 +7,6 @@ export const conection = new Sequelize(
     {
         host: 'localhost',
         dialect: 'mysql'
+      
     }
 )

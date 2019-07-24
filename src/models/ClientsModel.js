@@ -1,10 +1,11 @@
 import sequelize from 'sequelize';
 import {conection} from '../config/database';
 
-const User = conection.define('usuarios',{
+ const User = conection.define('usuarios',{
     idUsuarios: {
         type: sequelize.INTEGER,
-        primaryKey: true
+        primaryKey: true,
+        autoIncrement: true
     },
     Nick: {
         type: sequelize.STRING(40),
